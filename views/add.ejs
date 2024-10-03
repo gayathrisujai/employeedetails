@@ -1,0 +1,62 @@
+<%- include('partials/header') %>
+
+<style>
+  body {
+    background-color: #f4f4f4;
+    margin: 0;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 60px; /* Adjusted to keep the header intact */
+  }
+
+  .employee-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px; /* Prevents stretching */
+    width: 100%;
+  }
+
+  .employee-form input, .employee-form button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .employee-form button {
+    background-color: #E85C0D;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .employee-form button:hover {
+    background-color: #FF9100;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+</style>
+
+<div class="form-container">
+  <form class="employee-form" action="/add" method="POST">
+    <h2>Add New Employee</h2>
+    <input type="text" name="empName" placeholder="Employee Name" required><br>
+    <input type="text" name="empDesgn" placeholder="Employee Designation" required><br>
+    <input type="text" name="empLocation" placeholder="Employee Location" required><br>
+    <input type="number" name="empSalary" placeholder="Employee Salary" required><br>
+    <button type="submit">Add</button>
+  </form>
+</div>
+
