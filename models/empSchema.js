@@ -5,5 +5,5 @@ const empSchema = mongoose.Schema({
     empLocation:String,
     empSalary:Number
 });
-const empData=mongoose.model('emp',empSchema)
+const empData=mongoose.model('sampledetail',empSchema)
 module.exports=empData
